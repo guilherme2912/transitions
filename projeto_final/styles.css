@@ -236,6 +236,8 @@ a:hover {
     font-family: sans-serif;
     letter-spacing: 1px;
     color: rgb(109, 109, 109);
+    font-weight: bold;
+
 }
 
 .card-wrapper{
@@ -250,8 +252,8 @@ a:hover {
 .card-wrapper::before {
     content: '';
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 100%;
+    width: 100%;
     display: block;
     border: 1px solid white;
     opacity: 0;
@@ -259,6 +261,7 @@ a:hover {
 }
 
 .card-wrapper h2 {
+    text-decoration: none;
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -275,11 +278,14 @@ a:hover {
     transition: 0.3s;
 }
 
+.card:hover{
+    filter: unset;
+}
+
 .card:hover > .card-wrapper::before {
     opacity: 1;
     width: 350px;
     height: 250px;
-
 }
 
 .card:hover > .card-wrapper p {
@@ -287,6 +293,7 @@ a:hover {
     opacity: 1;
     visibility: visible;
 }
+
 
 /*  FOOTER */
 
